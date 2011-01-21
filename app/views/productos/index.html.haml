@@ -1,0 +1,32 @@
+%div{:style => 'float:right'}= link_to 'New Producto', new_producto_path
+
+%h1= "Listing productos"
+
+%table
+	%tr
+		%th= "Imagen"
+		%th= "Nombre"
+		%th= "Descripcion"
+		%th= "Family"
+		%th= "Wellness"
+		%th= "Water"
+		%th= "Volcanic"
+		%th= "Activo"
+		%th
+		%th
+
+	- @productos.each do |producto|
+		%tr
+			%td= image_tag 'productos/'+producto.imagen, :height => 100
+			- if can? :edit, producto
+				%td= link_to producto.nombre, edit_producto_path(producto)
+			- else
+				%td= link_to producto.nombre, producto
+			%td= producto.descripcion
+			%td= producto.family
+			%td= producto.wellness
+			%td= producto.water
+			%td= producto.volcanic
+			%td= producto.activo
+			%td
+				= link_to 'Borrar', producto, :confirm => '¿Seguro?', :method => 'delete' if can? :destroy, producto

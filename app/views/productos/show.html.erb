@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @producto.nombre %>
+</p>
+
+<p>
+  <b>Descripcion:</b>
+  <%= @producto.descripcion %>
+</p>
+
+<p>
+  <b>Family:</b>
+  <%= @producto.family %>
+</p>
+
+<p>
+  <b>Wellness:</b>
+  <%= @producto.wellness %>
+</p>
+
+<p>
+  <b>Water:</b>
+  <%= @producto.water %>
+</p>
+
+<p>
+  <b>Volcanic:</b>
+  <%= @producto.volcanic %>
+</p>
+
+<p>
+  <b>Imagen:</b>
+  <%= @producto.imagen %>
+</p>
+
+<p>
+  <b>Activo:</b>
+  <%= @producto.activo %>
+</p>
+
+
+<%= link_to 'Edit', edit_producto_path(@producto) %> |
+<%= link_to 'Back', productos_path %>

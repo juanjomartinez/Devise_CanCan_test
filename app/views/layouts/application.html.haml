@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+%html
+	%head
+		%title= "Market Place"
+		= stylesheet_link_tag :all
+		= javascript_include_tag :defaults
+		= csrf_meta_tag
+
+	%body
+		%p
+			= "Logueado como:  "
+			%b= current_usuario.user
+		%p#notice= notice
+		%p#alert= alert
+		= yield

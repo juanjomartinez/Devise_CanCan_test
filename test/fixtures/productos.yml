@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nombre: MyString
+  descripcion: MyText
+  family: false
+  wellness: false
+  water: false
+  volcanic: false
+  imagen: MyString
+  activo: false
+
+two:
+  nombre: MyString
+  descripcion: MyText
+  family: false
+  wellness: false
+  water: false
+  volcanic: false
+  imagen: MyString
+  activo: false
